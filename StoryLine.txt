@@ -1,0 +1,5 @@
+You are an elite biologist and master gardener sent out by the United Nations to help terraform distant planets and make them inhabitable.
+Your specific task is to bring the oxygen production rate to at least a neutral level. Luckily all of the planets you are sent to have native Plants that provide oxygen on their own. The only thing you need to do to encourage the production is to water the plants that are already there.
+But watch yourself! Some of those plants will inevitably be hostile and might even move in order to try and catch you. Sometimes you might even have to cut down a plant or two in order to survive, even if it worsens the state of the planet and puts you further away from reaching your goal.
+Your Rocket will automatically open its door as soon as you have achieved a neutral oxygen rate, so you can jump in and get out of there and head to the next location to terraform.
+Each location you visit has a limited amount of oxygen so don't move around too much or you'll end up running out which usually doesn't end well.
