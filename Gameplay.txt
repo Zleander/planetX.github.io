@@ -3,3 +3,5 @@ Puzzle your way through 8 different Planets with unique enemies and obstacles. E
 	You yourself consume oxygen while plants provide some. Plants you have watered		will often produce more oxygen afterward.
 2. Reaching your rocket to escape from the planet
 	As soon as you have achieved a neutral oxygen rate your rocket will open up, 		letting you jump into it in order to escape the location and complete the level.
+
+In addition to plants some levels will contains levers that introduce new mechanics.

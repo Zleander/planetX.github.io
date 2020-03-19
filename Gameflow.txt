@@ -1,0 +1,2 @@
+PlanetX is a puzzle game with segregate levels that are usually pretty short and require a  specific trick to be solved. They can be restarted instantly and an arbitrary amount of times. Dying will restart you current level, meaning once a level is completed it doesn't have to be played again.
+The degree of difficulty reaches from super easy tutorials that teach to the basic mechanics to tricky conundrums that require thorough understanding of how the game works and outside-the-box thinking.

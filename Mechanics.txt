@@ -1,0 +1,41 @@
+Clone:
+	An copy of the player that does everything the player does but mirrored meaning if 	the player jumps up it jumps down ...
+Grower:
+	Upon being watered it spawns other growers on the neighbouring tiles and seeds 		that will turn into growers the next turn on their neighbours
+Patrol Plant:
+	- walks along a set path
+	- always shows the locations it wants to jump the next turn
+	- turns around if the path is blocked by something other than the player
+Snatcher:
+	- acts like patrol plant
+	- eats you if you stay in its vicinity too long
+Cactus:
+	- acts like a patrol plant but additionally tries to shoot you with his spikes
+Chaser:
+	- always walks the shortest path towards the player
+Dispenser:
+	- shoots arrows in a set direction
+Portal:
+	When the player jumps into it he will be ejected out of the other portal of the		same color in the same direction, he jumped into it.
+Conveyor:
+	Pushes whatever jumps onto it in a set direction
+Spring:
+	Pushes whatever jumps onto it multiple tiles in a set direction
+Gravity Lever:
+	When the player or the clone interact with it, it modifies the gravity and 		therefore the amount of tiles all entities jump with each move
+Unstable Ground / Water Lily:
+	Can be jumped but breaks/dissapears once an entity has jumped off of it
+Ice:
+	Pushes whatever jumps onto it in the same direction
+Runner:
+	- gets 'pushed' by entities that jump onto it
+Tumbleweed:
+	- gets 'pushed' by entities that jump onto it
+	- spawns tumbleweeds where is has been pushes past
+
+	
+
+Move:
+Cut:
+Water:
+Interact:
