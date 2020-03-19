@@ -4,7 +4,7 @@ body {
     padding: 0px;
     background-color: #272626;
     font-family: 'm5x7medium';
-    color: rgb(51, 51, 51);
+    color: rgb(207, 207, 207);
     font-size: 50px;
     height: 100%;
 
@@ -19,29 +19,31 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     overflow: hidden;
+    transition: all 1s;
 }
 
 #title_content {
     position: absolute;
     margin: 0 auto;
     z-index: 2;
-    top: 100px;
+    top: 25%;
     left: 50%;
     color: white;
     transform: translate(-50%, 0);
 }
 
 #video-wrapper {
-    background-color: yellow;
+    background-color: rgb(8, 8, 8);
     height: 100%;
     width: 100%;
 }
 
 .text_wrapper {
     display: block;
-    width: calc(100% - 40px);
+    width: calc(50% - 40px);
     position: relative;
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: rgb(29, 29, 29);
+    border-radius: 0px 20px 0px 0px;
     padding: 20px;
 }
 

@@ -27,62 +27,40 @@
         <div class="text_container">
             <h1> The Story </h1>
             <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet,
-                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no
-                sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                elitr,
-                sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos
-                et
-                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                ipsum
-                dolor sit amet.
+                You are an elite biologist and master gardener sent out by the United Nations to help terraform distant
+                planets and make them inhabitable.
+                Your specific task is to bring the oxygen production rate to at least a neutral level. Luckily all of
+                the planets you are sent to have native Plants that provide oxygen on their own. The only thing you need
+                to do to encourage the production is to water the plants that are already there.
+                But watch yourself! Some of those plants will inevitably be hostile and might even move in order to try
+                and catch you. Sometimes you might even have to cut down a plant or two in order to survive, even if it
+                worsens the state of the planet and puts you further away from reaching your goal.
+                In some locations you will even find ancient structures of long forgotten civilizations such as
+                constructions providing artificial Gravity.
 
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                dolore eu
-                feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                zzril
-                delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit,
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                ex ea
-                commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                consequat,
-                vel
-                illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                praesent
-                luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                facer
-                possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt
-                ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                dolore eu
-                feugiat nulla facilisis.
-
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus
-                est
-                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                Your Rocket will automatically open its door as soon as you have achieved a neutral oxygen rate, so you
+                can jump in and get out of there and head to the next location to terraform.
+                Each location you visit has a limited amount of oxygen so don't move around too much or you'll end up
+                running out which usually doesn't end well.
             </p>
         </div>
     </div>
+
+    <script>
+        var checkScroll = function () {
+            console.log("scrollio", window.scrollY, window.innerHeight)
+            var video = document.getElementById("loop_vid")
+            const offset = 50;
+            if (window.scrollY >= offset) {
+                video.style.transform = "translate(-25%, 0)"
+            } else {
+                video.style.transform = "translate(-50%, 0)"
+            }
+
+        }
+
+        window.addEventListener("scroll", checkScroll)
+    </script>
 
 
 
