@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="pixel-font-webkit/stylesheet.css" type="text/css" charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
     <title>Planet X</title>
 </head>
 
@@ -25,10 +26,33 @@
 
     <div class="text_wrapper">
         <div class="text_container">
+            <h1> Introduction </h1>
+            <p>
+                PlanetX is a puzzle game with segregate levels that are usually pretty short and require a specific
+                trick
+            </p>
+            <p>
+                to be solved. They can be restarted instantly and an arbitrary amount of times. Dying will restart you
+                current level, meaning once a level is completed it doesn't have to be played again.
+                The degree of difficulty reaches from super easy tutorials that teach to the basic mechanics to tricky
+                conundrums that require thorough understanding of how the game works and outside-the-box thinking.
+            </p>
+        </div>
+    </div>
+
+    <div class="text_wrapper">
+        <div class="text_container">
             <h1> The Story </h1>
             <p>
-                You are an elite biologist and master gardener sent out by the United Nations to help terraform distant
+                You are an <b class="highlight-text"> elite biologist </b> and <b class="highlight-text">master
+                    gardener</b>
+                sent
+                out by the United
+                Nations to help terraform
+                distant
                 planets and make them inhabitable.
+            </p>
+            <p>
                 Your specific task is to bring the oxygen production rate to at least a neutral level. Luckily all of
                 the planets you are sent to have native Plants that provide oxygen on their own. The only thing you need
                 to do to encourage the production is to water the plants that are already there.
@@ -37,21 +61,50 @@
                 worsens the state of the planet and puts you further away from reaching your goal.
                 In some locations you will even find ancient structures of long forgotten civilizations such as
                 constructions providing artificial Gravity.
-
-                Your Rocket will automatically open its door as soon as you have achieved a neutral oxygen rate, so you
-                can jump in and get out of there and head to the next location to terraform.
-                Each location you visit has a limited amount of oxygen so don't move around too much or you'll end up
-                running out which usually doesn't end well.
             </p>
+
         </div>
     </div>
+
+    <div class="text_wrapper" id="gameplay_wrapper">
+        <div class="text_container">
+            <h1> Gameplay </h1>
+            <p>
+                Puzzle your way through 8 different Planets with unique enemies and obstacles. Each enemy will give you
+                the
+                choice of watering it or cutting it down. Both methods render it harmless. Cutting will completely wipe
+                it
+                out while watering it makes it remain on the map as an obstacle that provides oxygen permanently. Use
+                these
+                two mechanics to achieve both win conditions:
+            </p>
+
+            <ol>
+                <li>A neutral or higher oxygen rate
+                    You yourself consume oxygen while plants provide some. Plants you have watered will often produce
+                    more
+                    oxygen afterward. </li>
+                <li>Reaching your rocket to escape from the planet
+                    As soon as you have achieved a neutral oxygen rate your rocket will open up, letting you jump into
+                    it in
+                    order to escape the location and complete the level. </li>
+            </ol>
+            <p>In addition to plants some levels will contains levers that introduce new mechanics.</p>
+        </div>
+    </div>
+
+    <div id="white_space"></div>
 
     <script>
         var checkScroll = function () {
             console.log("scrollio", window.scrollY, window.innerHeight)
             var video = document.getElementById("loop_vid")
             const offset = 50;
-            if (window.scrollY >= offset) {
+            var bodyRect = document.body.getBoundingClientRect()
+            var last_wrapper = document.getElementById("gameplay_wrapper")
+            var last_wrapper_bottom = last_wrapper.offsetTop + last_wrapper.offsetHeight
+            var is_at_bottom = last_wrapper_bottom < window.scrollY + window.innerHeight / 2
+            if (window.scrollY >= offset && !is_at_bottom) {
                 video.style.transform = "translate(-25%, 0)"
             } else {
                 video.style.transform = "translate(-50%, 0)"

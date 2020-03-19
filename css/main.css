@@ -2,13 +2,15 @@ html,
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #272626;
-    font-family: 'm5x7medium';
+    font-family: 'Baloo Chettan 2', cursive;
     font-weight: 1;
     color: rgb(207, 207, 207);
-    font-size: 50px;
+
+    background-color: rgb(12, 9, 9);
     height: 100%;
     width: 100%;
+    font-size: x-large;
+    line-height: 1.5em;
 }
 
 #loop_vid {
@@ -35,7 +37,6 @@ body {
 }
 
 #video-wrapper {
-    background-color: rgb(8, 8, 8);
     height: 100%;
     width: 100%;
 }
@@ -45,14 +46,21 @@ body {
     width: calc(50% - 40px);
     position: relative;
     background-color: rgb(29, 29, 29);
-    border-radius: 0px 20px 0px 0px;
+    border-radius: 0px 20px 20px 0px;
     padding: 20px;
+    margin-bottom: 50px;
+}
+
+.highlight-text {
+    color: rgb(180, 92, 77);
 }
 
 .text_container {
+    position: relative;
     max-width: 800px;
     width: 80%;
     margin: 0 auto;
+    height: fit-content;
     text-align: justify;
 }
 
@@ -63,8 +71,26 @@ body {
     line-height: 1em;
     padding: 0;
     letter-spacing: -.02em;
+    font-family: 'm5x7medium';
+}
+
+h1 {
+    color: rgb(130, 155, 87);
+    font-family: 'm5x7medium';
+    font-size: 50px;
 }
 
 p {
     z-index: 3;
+    font-family: 'Baloo Chettan 2', cursive;
+
+}
+
+#white_space {
+    height: 1080px;
+    width: 100%;
+}
+
+li {
+    text-align: left;
 }
