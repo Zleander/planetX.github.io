@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="pixel-font-webkit/stylesheet.css" type="text/css" charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Planet X</title>
 </head>
 
@@ -111,11 +109,32 @@
                 <p>In addition to plants some levels will contains levers that introduce new mechanics.</p>
             </div>
         </div>
+
+
+        <div id="level-prev" name="Levels">
+
+            <ul id="bubble-list">
+                <li><img src="images/desert.png" alt="" class="level-bubble" onclick="open_bubble(this)" open="false">
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div id="white_space"></div>
 
     <script>
+        function open_bubble(element) {
+
+            if (element.getAttribute("open") == "false") {
+                element.style["clip-path"] = "circle(100%)"
+                element.setAttribute("open", "true")
+            } else {
+                element.style["clip-path"] = "circle(60px at center)"
+                element.setAttribute("open", "false")
+            }
+
+        }
+
         var checkScroll = function () {
             var video = document.getElementById("loop_vid")
             const offset = 50;
@@ -124,10 +143,8 @@
             var last_wrapper_bottom = last_wrapper.offsetTop + last_wrapper.offsetHeight
             var is_at_bottom = last_wrapper_bottom < window.scrollY + window.innerHeight / 2
             var nav_bar = document.getElementById("nav-bar")
-            if (window.scrollY >= offset) {
-                if (!is_at_bottom) {
-                    video.style.transform = "translate(-25%, 0)"
-                }
+            if (window.scrollY >= offset && !is_at_bottom) {
+                video.style.transform = "translate(-25%, 0)"
                 nav_bar.style.transform = "translate(0, 0)"
             } else {
                 video.style.transform = "translate(-50%, 0)"
@@ -137,6 +154,11 @@
         }
 
         window.addEventListener("scroll", checkScroll)
+
+        var nav_bar_logo = document.getElementById("nav-logo")
+        nav_bar_logo.onclick = function () {
+            scrollToYPos(0, 1000)
+        }
 
         var children = document.getElementById("content-wrapper").children
         var ul = document.getElementById("nav-bar-list")
@@ -152,6 +174,8 @@
             li.appendChild(a)
             ul.appendChild(li);
         }
+
+
 
 
         function scrollToYPos(yPos, duration) {
