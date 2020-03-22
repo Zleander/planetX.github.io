@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="pixel-font-webkit/stylesheet.css" type="text/css" charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Planet X</title>
 </head>
 
 <body>
+
+    <div id="nav-bar">
+        <ul id="nav-bar-list">
+            <li><img src="images/Logo.png" alt="" id="nav-logo"></li>
+        </ul>
+    </div>
 
     <video autoplay muted loop id="loop_vid">
 
@@ -21,75 +28,88 @@
     </div>
 
     <div id="title_content">
-        <h1 id="title">PlanetX</h1>
+        <img src="images/Logo.png" alt="">
     </div>
 
-    <div class="text_wrapper">
-        <div class="text_container">
-            <h1> Introduction </h1>
-            <p>
-                PlanetX is a puzzle game with segregate levels that are usually pretty short and require a specific
-                trick
-            </p>
-            <p>
-                to be solved. They can be restarted instantly and an arbitrary amount of times. Dying will restart you
-                current level, meaning once a level is completed it doesn't have to be played again.
-                The degree of difficulty reaches from super easy tutorials that teach to the basic mechanics to tricky
-                conundrums that require thorough understanding of how the game works and outside-the-box thinking.
-            </p>
+    <div id="content-wrapper">
+        <div class="text_wrapper" name="Introduction">
+            <div class="text_container">
+                <h1> Introduction </h1>
+                <p>
+                    PlanetX is a puzzle game with segregate levels that are usually pretty short and require a specific
+                    trick
+                </p>
+                <p>
+                    to be solved. They can be restarted instantly and an arbitrary amount of times. Dying will restart
+                    you
+                    current level, meaning once a level is completed it doesn't have to be played again.
+                    The degree of difficulty reaches from super easy tutorials that teach to the basic mechanics to
+                    tricky
+                    conundrums that require thorough understanding of how the game works and outside-the-box thinking.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="text_wrapper">
-        <div class="text_container">
-            <h1> The Story </h1>
-            <p>
-                You are an <b class="highlight-text"> elite biologist </b> and <b class="highlight-text">master
-                    gardener</b>
-                sent
-                out by the United
-                Nations to help terraform
-                distant
-                planets and make them inhabitable.
-            </p>
-            <p>
-                Your specific task is to bring the oxygen production rate to at least a neutral level. Luckily all of
-                the planets you are sent to have native Plants that provide oxygen on their own. The only thing you need
-                to do to encourage the production is to water the plants that are already there.
-                But watch yourself! Some of those plants will inevitably be hostile and might even move in order to try
-                and catch you. Sometimes you might even have to cut down a plant or two in order to survive, even if it
-                worsens the state of the planet and puts you further away from reaching your goal.
-                In some locations you will even find ancient structures of long forgotten civilizations such as
-                constructions providing artificial Gravity.
-            </p>
+        <div class="text_wrapper" name="Story">
+            <div class="text_container">
+                <h1> The Story </h1>
+                <p>
+                    You are an <b class="highlight-text"> elite biologist </b> and <b class="highlight-text">master
+                        gardener</b>
+                    sent
+                    out by the United
+                    Nations to help terraform
+                    distant
+                    planets and make them inhabitable.
+                </p>
+                <p>
+                    Your specific task is to bring the oxygen production rate to at least a neutral level. Luckily all
+                    of
+                    the planets you are sent to have native Plants that provide oxygen on their own. The only thing you
+                    need
+                    to do to encourage the production is to water the plants that are already there.
+                    But watch yourself! Some of those plants will inevitably be hostile and might even move in order to
+                    try
+                    and catch you. Sometimes you might even have to cut down a plant or two in order to survive, even if
+                    it
+                    worsens the state of the planet and puts you further away from reaching your goal.
+                    In some locations you will even find ancient structures of long forgotten civilizations such as
+                    constructions providing artificial Gravity.
+                </p>
 
+            </div>
         </div>
-    </div>
 
-    <div class="text_wrapper" id="gameplay_wrapper">
-        <div class="text_container">
-            <h1> Gameplay </h1>
-            <p>
-                Puzzle your way through 8 different Planets with unique enemies and obstacles. Each enemy will give you
-                the
-                choice of watering it or cutting it down. Both methods render it harmless. Cutting will completely wipe
-                it
-                out while watering it makes it remain on the map as an obstacle that provides oxygen permanently. Use
-                these
-                two mechanics to achieve both win conditions:
-            </p>
+        <div class="text_wrapper" id="gameplay_wrapper" name="Gameplay">
+            <div class="text_container">
+                <h1> Gameplay </h1>
+                <p>
+                    Puzzle your way through 8 different Planets with unique enemies and obstacles. Each enemy will give
+                    you
+                    the
+                    choice of watering it or cutting it down. Both methods render it harmless. Cutting will completely
+                    wipe
+                    it
+                    out while watering it makes it remain on the map as an obstacle that provides oxygen permanently.
+                    Use
+                    these
+                    two mechanics to achieve both win conditions:
+                </p>
 
-            <ol>
-                <li>A neutral or higher oxygen rate
-                    You yourself consume oxygen while plants provide some. Plants you have watered will often produce
-                    more
-                    oxygen afterward. </li>
-                <li>Reaching your rocket to escape from the planet
-                    As soon as you have achieved a neutral oxygen rate your rocket will open up, letting you jump into
-                    it in
-                    order to escape the location and complete the level. </li>
-            </ol>
-            <p>In addition to plants some levels will contains levers that introduce new mechanics.</p>
+                <ol>
+                    <li>A neutral or higher oxygen rate
+                        You yourself consume oxygen while plants provide some. Plants you have watered will often
+                        produce
+                        more
+                        oxygen afterward. </li>
+                    <li>Reaching your rocket to escape from the planet
+                        As soon as you have achieved a neutral oxygen rate your rocket will open up, letting you jump
+                        into
+                        it in
+                        order to escape the location and complete the level. </li>
+                </ol>
+                <p>In addition to plants some levels will contains levers that introduce new mechanics.</p>
+            </div>
         </div>
     </div>
 
@@ -97,22 +117,68 @@
 
     <script>
         var checkScroll = function () {
-            console.log("scrollio", window.scrollY, window.innerHeight)
             var video = document.getElementById("loop_vid")
             const offset = 50;
             var bodyRect = document.body.getBoundingClientRect()
             var last_wrapper = document.getElementById("gameplay_wrapper")
             var last_wrapper_bottom = last_wrapper.offsetTop + last_wrapper.offsetHeight
             var is_at_bottom = last_wrapper_bottom < window.scrollY + window.innerHeight / 2
-            if (window.scrollY >= offset && !is_at_bottom) {
-                video.style.transform = "translate(-25%, 0)"
+            var nav_bar = document.getElementById("nav-bar")
+            if (window.scrollY >= offset) {
+                if (!is_at_bottom) {
+                    video.style.transform = "translate(-25%, 0)"
+                }
+                nav_bar.style.transform = "translate(0, 0)"
             } else {
                 video.style.transform = "translate(-50%, 0)"
+                nav_bar.style.transform = "translate(0, -100%)"
             }
 
         }
 
         window.addEventListener("scroll", checkScroll)
+
+        var children = document.getElementById("content-wrapper").children
+        var ul = document.getElementById("nav-bar-list")
+        for (let i = 0; i < children.length; i++) {
+            var li = document.createElement("li");
+            li.className = "nav-bar-list-item"
+            var a = document.createElement("a")
+            a.innerHTML = children[i].getAttribute("name")
+            a.onclick = function () {
+                scrollToYPos(children[i].offsetTop - 70, 1000)
+            }
+            a.className = "nav-bar-link"
+            li.appendChild(a)
+            ul.appendChild(li);
+        }
+
+
+        function scrollToYPos(yPos, duration) {
+            var startingY = window.scrollY;
+            var diff = yPos - startingY;
+            var easing = function (t) {
+                return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+            }
+            var start;
+
+            // Bootstrap our animation - it will get called right before next frame shall be rendered.
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) start = timestamp;
+                // Elapsed milliseconds since start of scrolling.
+                var time = timestamp - start;
+                // Get percent of completion in range [0, 1].
+                var percent = Math.min(time / duration, 1);
+                percent = easing(percent)
+
+                window.scrollTo(0, startingY + diff * percent);
+
+                // Proceed with animation as long as we wanted it to.
+                if (time < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            })
+        }
     </script>
 
 
