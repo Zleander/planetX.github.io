@@ -101,8 +101,16 @@ body {
     margin-bottom: 50px;
 }
 
-.highlight-text {
+.red-highlight-text {
     color: rgb(180, 92, 77);
+}
+
+.blue-highlight-text {
+    color: rgb(93, 136, 255);
+}
+
+.green-highlight-text {
+    color: rgb(87, 163, 57);
 }
 
 .text_container {
