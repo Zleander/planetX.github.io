@@ -1,7 +1,0 @@
-Puzzle your way through 8 different Planets with unique enemies and obstacles. Each enemy will give you the choice of watering it or cutting it down. Both methods render it harmless. Cutting will completely wipe it out while watering it makes it remain on the map as an obstacle that provides oxygen permanently. Use these two mechanics to achieve both win conditions:
-1. A neutral or higher oxygen rate
-	You yourself consume oxygen while plants provide some. Plants you have watered		will often produce more oxygen afterward.
-2. Reaching your rocket to escape from the planet
-	As soon as you have achieved a neutral oxygen rate your rocket will open up, 		letting you jump into it in order to escape the location and complete the level.
-
-In addition to plants some levels will contains levers that introduce new mechanics.
