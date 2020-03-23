@@ -111,29 +111,83 @@
         </div>
 
 
-        <div id="level-prev" name="Levels">
 
-            <ul id="bubble-list">
-                <li><img src="images/desert.png" alt="" class="level-bubble" onclick="open_bubble(this)" open="false">
-                </li>
-            </ul>
+    </div>
+
+    <div id="level-prev" name="Levels">
+        <div id="image-wrapper">
+            <img src="images/desert.png" alt="" class="level-image" id="desert">
+            <img src="images/grss-lands.png" alt="" class="level-image" id="grass">
+            <img src="images/grss-lands.png" alt="" class="level-image" id="grass2">
+        </div>
+
+
+        <div id="bubble-list">
+            <div class="inline-list">
+                <div class="bubble-mouse" onmouseover="toggle_bubble('desert', true)"
+                    onmouseout="toggle_bubble('desert', false)"> </div>
+            </div>
+            <div class="inline-list">
+                <div class="bubble-mouse" onmouseover="toggle_bubble('grass', true)"
+                    onmouseout="toggle_bubble('grass', false)"> </div>
+            </div>
+            <div class="inline-list">
+                <div class="bubble-mouse" onmouseover="toggle_bubble('grass2', true)"
+                    onmouseout="toggle_bubble('grass2', false)"> </div>
+            </div>
         </div>
     </div>
 
     <div id="white_space"></div>
 
     <script>
-        function open_bubble(element) {
+        function toggle_bubble(id, open, animated = true) {
+            var element = document.getElementById(id)
+            element.setAttribute("open", open)
+            var temp_transition = element.style.transition
 
-            if (element.getAttribute("open") == "false") {
-                element.style["clip-path"] = "circle(100%)"
-                element.setAttribute("open", "true")
+            if (!animated) {
+                element.style.transition = "none"
             } else {
-                element.style["clip-path"] = "circle(60px at center)"
-                element.setAttribute("open", "false")
+
+                element.style.transition = "clip-path 1s"
             }
 
+            if (open) {
+                element.style["clip-path"] = "circle(100%)"
+                element.style.zIndex = 5
+            } else {
+                var position = element.getAttribute("circle-pos")
+                element.style["clip-path"] = "circle(100px at " + position + ")"
+            }
         }
+
+
+        var bubble_list = document.getElementById("bubble-list")
+        var bubbles = bubble_list.children
+        var level_prev_wrapper = document.getElementById("level-prev")
+        var images = document.getElementById("image-wrapper").children
+
+
+        function update_bubble_positions() {
+            for (let i = 0; i < bubbles.length; i++) {
+                const bubble = bubbles[i];
+                const image = images[i];
+                image.setAttribute("circle-pos", (bubble.offsetLeft + bubble_list.offsetLeft + 100) + "px " +
+                    (level_prev_wrapper
+                        .offsetHeight / 2) + "px");
+
+                var open = bubble.getAttribute("open") == 'true'
+                toggle_bubble(image.id, open, false)
+            }
+        }
+
+        update_bubble_positions()
+        window.addEventListener("resize", update_bubble_positions)
+
+
+
+
 
         var checkScroll = function () {
             var video = document.getElementById("loop_vid")
@@ -146,9 +200,15 @@
             if (window.scrollY >= offset && !is_at_bottom) {
                 video.style.transform = "translate(-25%, 0)"
                 nav_bar.style.transform = "translate(0, 0)"
+                video.style.opacity = 1
+            } else if (is_at_bottom) {
+                video.style.transform = "translate(-50%, 0)"
+                nav_bar.style.transform = "translate(0, 0)"
+                video.style.opacity = 0
             } else {
                 video.style.transform = "translate(-50%, 0)"
                 nav_bar.style.transform = "translate(0, -100%)"
+                video.style.opacity = 1
             }
 
         }
