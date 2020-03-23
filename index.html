@@ -34,19 +34,19 @@
             <div class="text_container">
                 <h1> Introduction </h1>
                 <p>
-                    PlanetX is a semi-turn-based <b class="red-highlight-text">puzzle game</b>. Whenever 
+                    PlanetX is a semi-turn-based <b class="red-highlight-text">puzzle game</b>. Whenever
                     you move, all the plants in that specific level do so as well.
                 </p>
                 <p>
-                    You have the ability to <b class="blue-highlight-text">water</b> and/or 
-                    <b class="red-highlight-text">cut </b>every plant, to which different Plants 
-                    will react differently. Soon you will notice the advantages and disadvantages 
+                    You have the ability to <b class="blue-highlight-text">water</b> and/or
+                    <b class="red-highlight-text">cut </b>every plant, to which different Plants
+                    will react differently. Soon you will notice the advantages and disadvantages
                     of both of these mechanics.
                 </p>
                 <p>
-                    Solving all of the puzzles the game has to offer, will require a 
+                    Solving all of the puzzles the game has to offer, will require a
                     very thorough understanding of how the game works and <b class="red-highlight-text">
-                    outside-the-box thinking</b>.
+                        outside-the-box thinking</b>.
 
                 </p>
             </div>
@@ -57,16 +57,22 @@
                 <h1> The Story </h1>
                 <p>
                     You are an <b class="green-highlight-text"> elite biologist </b> and
-                    <b class="green-highlight-text">master gardener</b> sent out by the 
-                    United Nations to help <b class="green-highlight-text">terraform</b> distant planets and make them inhabitable.
+                    <b class="green-highlight-text">master gardener</b> sent out by the
+                    United Nations to help <b class="green-highlight-text">terraform</b> distant planets and make them
+                    inhabitable.
                 </p>
                 <p>
-                    Your specific task is to bring the <b class="blue-highlight-text"> oxygen production rate</b> to at least a 
-                    <b class="blue-highlight-text">neutral</b> level. Luckily all of the planets you are sent to have native Plants 
-                    that provide oxygen on their own. The only thing you need to do to encourage the production is to water the 
+                    Your specific task is to bring the <b class="blue-highlight-text"> oxygen production rate</b> to at
+                    least a
+                    <b class="blue-highlight-text">neutral</b> level. Luckily all of the planets you are sent to have
+                    native Plants
+                    that provide oxygen on their own. The only thing you need to do to encourage the production is to
+                    water the
                     plants that are already there.
-                    But watch yourself! Some of those <b class="green-highlight-text">plants</b> will inevitably be hostile and might even move in order to
-                    try and catch you. Sometimes you will have to <b class="red-highlight-text">cut</b> down a <b class="green-highlight-text">plant</b> or two in order to survive, even if
+                    But watch yourself! Some of those <b class="green-highlight-text">plants</b> will inevitably be
+                    hostile and might even move in order to
+                    try and catch you. Sometimes you will have to <b class="red-highlight-text">cut</b> down a <b
+                        class="green-highlight-text">plant</b> or two in order to survive, even if
                     it worsens the state of the planet and puts you further away from reaching your goal.
                     In some locations, there will be ancient structures of long forgotten-civilizations such as
                     constructions providing artificial Gravity.
@@ -79,30 +85,40 @@
             <div class="text_container">
                 <h1> Gameplay </h1>
                 <p>
-                    Puzzle your way through 8 different Planets with unique enemies and obstacles. The Planets consist of multiple levels, 
+                    Puzzle your way through 8 different Planets with unique enemies and obstacles. The Planets consist
+                    of multiple levels,
                     that are all completely independent and have the same two win conditions:
                 </p>
 
                 <ol>
                     <li><b class="blue-highlight-text">A neutral or higher oxygen rate</b>
                         <p>
-                        You yourself consume oxygen while plants provide some.</li>
-                        </p>
+                            You yourself consume oxygen while plants provide some.
+                    </li>
+                    </p>
                     <li><b class="red-highlight-text">Reaching your rocket to escape from the planet</b>
                         <p>
-                        As soon as you have achieved a <b class="blue-highlight-text"> neutral oxygen rate</b> your rocket will open up, letting you jump into
-                        it in order to escape the location and complete the level.
-                        </p> </li>
+                            As soon as you have achieved a <b class="blue-highlight-text"> neutral oxygen rate</b> your
+                            rocket will open up, letting you jump into
+                            it in order to escape the location and complete the level.
+                        </p>
+                    </li>
                 </ol>
                 <p>
-                    In order to achieve those win conditions, you can interact with the <b class="green-highlight-text">plants</b> in the level. 
+                    In order to achieve those win conditions, you can interact with the <b
+                        class="green-highlight-text">plants</b> in the level.
                 </p>
                 <p>
-                    Each plant will give you the choice of <b class="blue-highlight-text">watering</b> it or <b class="red-highlight-text">cutting</b> it down. 
-                    Both methods render it <b class="green-highlight-text">harmless</b>, though cutting it will completely
-                    wipe it out and therefore worsen the <b class="blue-highlight-text">oxygen rate</b> of the level while <b class="blue-highlight-text">watering</b>  
-                    it makes it remain on the map as an <b class="red-highlight-text">obstacle</b> that you can't pass through but 
-                    it continues to provide <b class="blue-highlight-text">oxygen</b>. In addition to that, most plants will provide more oxygen after they have been 
+                    Each plant will give you the choice of <b class="blue-highlight-text">watering</b> it or <b
+                        class="red-highlight-text">cutting</b> it down.
+                    Both methods render it <b class="green-highlight-text">harmless</b>, though cutting it will
+                    completely
+                    wipe it out and therefore worsen the <b class="blue-highlight-text">oxygen rate</b> of the level
+                    while <b class="blue-highlight-text">watering</b>
+                    it makes it remain on the map as an <b class="red-highlight-text">obstacle</b> that you can't pass
+                    through but
+                    it continues to provide <b class="blue-highlight-text">oxygen</b>. In addition to that, most plants
+                    will provide more oxygen after they have been
                     <b class="blue-highlight-text">watered</b> .
                 </p>
             </div>
@@ -136,9 +152,12 @@
         </div>
     </div>
 
-    <div id="white_space"></div>
-
     <script>
+        var bubble_list = document.getElementById("bubble-list")
+        var bubbles = bubble_list.children
+        var level_prev_wrapper = document.getElementById("level-prev")
+        var images = document.getElementById("image-wrapper").children
+
         function toggle_bubble(id, open, animated = true) {
             var element = document.getElementById(id)
             element.setAttribute("open", open)
@@ -147,7 +166,6 @@
             if (!animated) {
                 element.style.transition = "none"
             } else {
-
                 element.style.transition = "clip-path 1s"
             }
 
@@ -158,14 +176,15 @@
                 var position = element.getAttribute("circle-pos")
                 element.style["clip-path"] = "circle(100px at " + position + ")"
             }
+            var images = document.getElementById("image-wrapper").children
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                if (image.id != id) {
+                    image.style.zIndex = 4
+                }
+
+            }
         }
-
-
-        var bubble_list = document.getElementById("bubble-list")
-        var bubbles = bubble_list.children
-        var level_prev_wrapper = document.getElementById("level-prev")
-        var images = document.getElementById("image-wrapper").children
-
 
         function update_bubble_positions() {
             for (let i = 0; i < bubbles.length; i++) {
@@ -201,7 +220,7 @@
                 video.style.opacity = 1
             } else if (is_at_bottom) {
                 video.style.transform = "translate(-50%, 0)"
-                nav_bar.style.transform = "translate(0, 0)"
+                nav_bar.style.transform = "translate(0, -100%)"
                 video.style.opacity = 0
             } else {
                 video.style.transform = "translate(-50%, 0)"
