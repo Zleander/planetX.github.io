@@ -4,7 +4,7 @@ body {
     padding: 0px;
     font-family: Geneva, Tahoma, Verdana, sans-serif;
     font-weight: 1;
-    color: rgb(207, 207, 207);   
+    color: rgb(207, 207, 207);
     background-color: rgb(12, 9, 9);
     height: 100%;
     width: 100%;
@@ -112,8 +112,8 @@ body {
 }
 
 :root {
-    --highlight-color: rgb(206, 219, 26);
-  }
+    --highlight-color: rgb(130, 155, 87);
+}
 
 .red-highlight-text {
     color: var(--highlight-color);
@@ -187,7 +187,12 @@ h1 {
     width: 200px;
     background-color: clear;
     border-radius: 100px;
+    background-color: clear;
     z-index: 5;
+}
+
+.bubble-mouse:hover {
+    cursor: pointer;
 }
 
 #image-wrapper {}
@@ -195,13 +200,17 @@ h1 {
 .level-image {
     display: block;
     position: absolute;
+    object-fit: cover;
     opacity: 1;
     z-index: 4;
     width: 100%;
-    min-width: 100%;
+    max-height: 80%;
     overflow: hidden;
     pointer-events: none;
-    transition: clip-path 1s;
+    transition: clip-path,
+        1s,
+        width 1s,
+        height 1s;
 }
 
 .level-bubble:hover {}
@@ -213,6 +222,15 @@ p {
 #white_space {
     height: 1080px;
     width: 100%;
+}
+
+.static-title {
+    position: absolute;
+    display: block;
+    font-size: 64px;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 li {

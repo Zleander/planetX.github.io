@@ -124,6 +124,8 @@
     </div>
 
     <div id="level-prev" name="Levels">
+        <h1 class="static-title"> Level Previews</h1>
+
         <div id="image-wrapper">
             <img src="images/desert.png" alt="" class="level-image" id="desert">
             <img src="images/grss-lands.png" alt="" class="level-image" id="grass">
@@ -133,16 +135,16 @@
 
         <div id="bubble-list">
             <div class="inline-list">
-                <div class="bubble-mouse" onmouseover="toggle_bubble('desert', true)"
-                    onmouseout="toggle_bubble('desert', false)"> </div>
+                <div class="bubble-mouse" onmouseover="mouse_over_bubble('desert', true)"
+                    onmouseout="mouse_over_bubble('desert', false)"> </div>
             </div>
             <div class="inline-list">
-                <div class="bubble-mouse" onmouseover="toggle_bubble('grass', true)"
-                    onmouseout="toggle_bubble('grass', false)"> </div>
+                <div class="bubble-mouse" onmouseover="mouse_over_bubble('grass', true)"
+                    onmouseout="mouse_over_bubble('grass', false)"> </div>
             </div>
             <div class="inline-list">
-                <div class="bubble-mouse" onmouseover="toggle_bubble('grass2', true)"
-                    onmouseout="toggle_bubble('grass2', false)"> </div>
+                <div class="bubble-mouse" onmouseover="mouse_over_bubble('grass2', true)"
+                    onmouseout="mouse_over_bubble('grass2', false)"> </div>
             </div>
         </div>
     </div>
@@ -155,42 +157,61 @@
 
         function toggle_bubble(id, open, animated = true) {
             var element = document.getElementById(id)
-            element.setAttribute("open", open)
             var temp_transition = element.style.transition
 
             if (!animated) {
                 element.style.transition = "none"
             } else {
-                element.style.transition = "clip-path 1s"
+                element.style.transition = "clip-path, 1s, width 1s, height 1s"
             }
 
             if (open) {
                 element.style["clip-path"] = "circle(100%)"
-                element.style.zIndex = 5
+                element.style.width = "80%"
+
             } else {
                 var position = element.getAttribute("circle-pos")
-                element.style["clip-path"] = "circle(100px at " + position + ")"
+                element.style["clip-path"] = "circle(100px at " + "center" + ")"
+                element.style.width = "400px"
             }
             var images = document.getElementById("image-wrapper").children
-            for (let i = 0; i < images.length; i++) {
-                const image = images[i];
-                if (image.id != id) {
-                    image.style.zIndex = 4
-                }
-
-            }
         }
 
-        function update_bubble_positions() {
+        function mouse_over_bubble(id, open) {
+            var element = document.getElementById(id)
+
+            element.setAttribute("open", open)
+            update_bubble_positions(true)
+
+        }
+
+        function update_bubble_positions(animated = false) {
+
+
             for (let i = 0; i < bubbles.length; i++) {
                 const bubble = bubbles[i];
                 const image = images[i];
-                image.setAttribute("circle-pos", (bubble.offsetLeft + bubble_list.offsetLeft + 100) + "px " +
-                    (level_prev_wrapper
-                        .offsetHeight / 2) + "px");
+                var open = image.getAttribute("open") == 'true'
+                toggle_bubble(image.id, open, animated)
 
-                var open = bubble.getAttribute("open") == 'true'
-                toggle_bubble(image.id, open, false)
+                // image.setAttribute("circle-pos", (bubble.offsetLeft + bubble_list.offsetLeft + 100) + "px " +
+                //     (level_prev_wrapper
+                //         .offsetHeight / 2) + "px");
+                const left = (bubble.offsetLeft + bubble_list.offsetLeft)
+                var x = left - 400 / 2 + bubble.offsetWidth / 2
+                var y = level_prev_wrapper.offsetHeight / 2 - 126
+
+                if (!open) {
+                    image.style.left = x + "px"
+                    image.style.zIndex = 4
+                    image.style.top = y + "px"
+                } else {
+                    console.log((window.innerWidth * 0.2) / 2)
+                    image.style.left = (window.innerWidth * 0.2) / 2 + "px"
+                    image.style.zIndex = 5
+                    image.style.top = (window.innerHeight * 0.2) / 2 + "px"
+                }
+
             }
         }
 
