@@ -4,8 +4,7 @@ body {
     padding: 0px;
     font-family: Geneva, Tahoma, Verdana, sans-serif;
     font-weight: 1;
-    color: rgb(207, 207, 207);
-
+    color: rgb(207, 207, 207);   
     background-color: rgb(12, 9, 9);
     height: 100%;
     width: 100%;
@@ -112,16 +111,20 @@ body {
     margin-bottom: 50px;
 }
 
+:root {
+    --highlight-color: rgb(206, 219, 26);
+  }
+
 .red-highlight-text {
-    color: rgb(180, 92, 77);
+    color: var(--highlight-color);
 }
 
 .blue-highlight-text {
-    color: rgb(93, 136, 255);
+    color: var(--highlight-color);
 }
 
 .green-highlight-text {
-    color: rgb(87, 163, 57);
+    color: var(--highlight-color);
 }
 
 .text_container {
